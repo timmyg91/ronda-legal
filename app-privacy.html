@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of Use — Ronda</title>
+<style>
+  :root { color-scheme: dark; }
+  body {
+    margin: 0 auto; padding: 48px 20px 96px; max-width: 42rem;
+    background: #22264B; color: #FCEFE7;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  }
+  h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 1.5rem; letter-spacing: -0.01em; }
+  h2 { font-size: 1.3rem; margin: 2.5rem 0 0.75rem; }
+  h3 { font-size: 1.05rem; margin: 1.75rem 0 0.5rem; color: #F7C6C1; }
+  p, li { color: #EDE6E0; }
+  a { color: #FF8A3D; }
+  strong { color: #FCEFE7; }
+  code { background: #15172E; padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.9em; }
+  ul { padding-left: 1.2rem; }
+  li { margin: 0.35rem 0; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.94rem; }
+  th, td { text-align: left; padding: 0.55rem 0.7rem; border-bottom: 1px solid #3A4077; vertical-align: top; }
+  th { color: #A9ABD1; font-weight: 600; }
+  hr { border: 0; border-top: 1px solid #3A4077; margin: 2.5rem 0; }
+  footer { margin-top: 4rem; color: #A9ABD1; font-size: 0.85rem; }
+</style>
+</head><body>
+<h1>App Store Connect — the App Privacy questionnaire</h1>
+<p>Separate from the Privacy Policy URL, and mandatory. Apple asks, category by</p>
+<p>category, what the app collects. The answers below are derived from the</p>
+<p>schema, not guessed — every field the app stores is accounted for.</p>
+<p><strong>Where:</strong> appstoreconnect.apple.com → your app → <strong>App Privacy</strong> (left</p>
+<p>sidebar) → <strong>Get Started</strong>.</p>
+<p>---</p>
+<h2>The one that shapes everything</h2>
+<p>&gt; <strong>Do you or your third-party partners use data for tracking?</strong></p>
+<p>&gt; <strong>No.</strong></p>
+<p>Ronda has no advertising, no analytics SDK, no ad identifier, and shares</p>
+<p>nothing with data brokers. Nothing is used to track anyone across other</p>
+<p>companies' apps or websites. Answer No, and every "Used for Tracking" question</p>
+<p>afterwards is also No.</p>
+<p>---</p>
+<h2>What to tick as collected</h2>
+<p>For each, Apple asks three things: is it <strong>collected</strong>, is it **linked to the</p>
+<p>user's identity<strong>, and what is it </strong>used for**.</p>
+<table><thead><tr><th>Category → Type</th><th>Collected</th><th>Linked</th><th>Used for</th></tr></thead><tbody>
+<tr><td>Contact Info → <strong>Email Address</strong></td><td>Yes</td><td>Yes</td><td>App Functionality</td></tr>
+<tr><td>Contact Info → <strong>Name</strong></td><td>Yes</td><td>Yes</td><td>App Functionality</td></tr>
+<tr><td>Location → <strong>Coarse Location</strong></td><td>Yes</td><td>Yes</td><td>App Functionality</td></tr>
+<tr><td>User Content → <strong>Photos or Videos</strong></td><td>Yes</td><td>Yes</td><td>App Functionality</td></tr>
+<tr><td>User Content → <strong>Other User Content</strong></td><td>Yes</td><td>Yes</td><td>App Functionality</td></tr>
+<tr><td>Identifiers → <strong>User ID</strong></td><td>Yes</td><td>Yes</td><td>App Functionality</td></tr>
+<tr><td>Usage Data → <strong>Product Interaction</strong></td><td>Yes</td><td>Yes</td><td>Analytics</td></tr>
+</tbody></table>
+<p><strong>App Functionality</strong> is the purpose for all of them except the last. Not</p>
+<p>Product Personalisation, and not Advertising — nothing here is used to target</p>
+<p>anything at anyone.</p>
+<h3>Notes on the awkward ones</h3>
+<p><strong>Coarse Location.</strong> The app asks iOS for an approximate position and turns it</p>
+<p>into a city name <strong>on the device</strong> — the coordinates never leave the phone.</p>
+<p>But a city name *is* transmitted and stored, so it counts as collected.</p>
+<p>Coarse, not Precise: Apple defines Precise as finer than three decimal places,</p>
+<p>and a city centre is nowhere near that.</p>
+<p><strong>Name.</strong> A first name only. There is no field for a surname.</p>
+<p><strong>Other User Content</strong> covers messages, bios, and the private notes people</p>
+<p>write about someone they met.</p>
+<p><strong>User ID.</strong> Every account has one. It is not shared with anyone.</p>
+<p><strong>Product Interaction</strong>, and why it is <strong>Analytics</strong> rather than App</p>
+<p>Functionality. The app records one thing about how you use it: that you</p>
+<p>opened an external link, with the site's domain, the screen, the city and the</p>
+<p>time. It is not needed for anything in the app to work — it exists to answer</p>
+<p>whether Ronda is useful to the places travellers spend money. That is</p>
+<p>evaluating behaviour, so it is Analytics, and saying otherwise would be</p>
+<p>choosing the flattering box.</p>
+<p>It is <strong>Linked</strong> to identity, because the row carries the user id until the</p>
+<p>account is deleted, at which point it is deleted too.</p>
+<p>This is <strong>not tracking</strong> in Apple's sense: nothing is shared with a data</p>
+<p>broker, nothing is joined to data from other apps or websites, and there is no</p>
+<p>advertising identifier anywhere in the app. <code>NSPrivacyTracking</code> stays false</p>
+<p>and App Tracking Transparency does not apply.</p>
+<p><strong>Browsing History</strong> was considered and left unticked. Apple defines it as</p>
+<p>content the user viewed *outside* the app. Ronda records that a link was</p>
+<p>tapped, inside the app; it never learns whether the page opened, what was on</p>
+<p>it, or where the person went next.</p>
+<p>---</p>
+<h2>What to leave unticked</h2>
+<p>Nothing in any of these is collected:</p>
+<p>Health &amp; Fitness · Financial Info · Contacts · Browsing History ·</p>
+<p>Search History · Purchases · Diagnostics · Sensitive Info ·</p>
+<p>Device ID · Advertising Data · Audio Data · Gameplay Content ·</p>
+<p>Customer Support · Physical Address · Phone Number · Precise Location ·</p>
+<p>Emails or Text Messages *(this means the contents of the user's own mailbox,</p>
+<p>not messages sent inside the app)* · Other Data Types</p>
+<p><strong>Date of birth</strong> is worth calling out: the app asks people to <strong>confirm</strong> they</p>
+<p>are 18, and stores only that they confirmed and when. It never asks for or</p>
+<p>stores a birth date, so there is nothing to declare.</p>
+<p>---</p>
+<h2>While you are in there</h2>
+<ul>
+<li><strong>App Information → Privacy Policy URL:</strong></li>
+</ul>
+<p>  <code>https://ronda.goodeboy.com/privacy.html</code></p>
+<ul>
+<li><strong>Pricing and Availability:</strong> deselect the EU countries, unless you want the</li>
+</ul>
+<p>  Digital Services Act trader disclosure — which publishes your name, address</p>
+<p>  and phone on the listing.</p>
+<ul>
+<li><strong>Age Rating:</strong> answer the questionnaire honestly. Unrestricted web access</li>
+</ul>
+<p>  is <strong>No</strong> — the only outbound links are ones a user you have met put on</p>
+<p>  their profile, and they open in the system browser behind a confirmation.</p>
+<footer>Ronda — a round of friends.</footer>
+</body></html>
